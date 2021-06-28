@@ -1,0 +1,70 @@
+/*----------------------------------image----------------------------*/
+
+.imageWrapper {
+    margin: 1em auto;
+    padding: 0;
+}
+
+
+/*----------------------------------image item----------------------------*/
+
+.imageHolder {
+    margin: 1em auto;
+    width: 95%;
+}
+.imageHolder img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/*----------------------------------image edit menu----------------------------*/
+
+
+
+
+
+.modalCoverImage {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+
+.imageEdit {
+    margin: 15% auto;
+    width: 50%;
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding-bottom: 1em;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+}
+
+.imgUploadwrap {
+    margin: 1em 2em;
+}
+
+.imgUploadwrap input {
+    border: none;
+    width: 10em;
+    line-height: 2em;
+    cursor: pointer;
+}
+.imgUploadwrap input:hover {
+    background-color: rgb(255, 193, 22) !important;
+    border: none;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .imageEdit {
+        width: 100%;
+    }
+}

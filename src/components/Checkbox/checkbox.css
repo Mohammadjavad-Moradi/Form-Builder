@@ -1,0 +1,150 @@
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)*/
+
+
+/*----------------------------------multi choice----------------------------*/
+
+.checkBoxWrapper {
+    margin: 1em auto;
+    padding: 0;
+}
+
+/*----------------------------------multi choice items----------------------------*/
+.checkwrap {
+    display: flex;
+    justify-content: start;
+    width: 95%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: .5em auto;
+}
+
+.checkItemWrap {
+    margin: 1em 6% 1em 0;
+    display: flex;
+    max-width: 20%;
+    align-items: center;
+    flex-direction: row;
+}
+
+.checkItm {
+    padding: 0 .5em;
+    font-size: medium;
+}
+
+.checkBoxNoteHolder p {
+    margin: 1em auto;
+    width: 95%;
+}
+
+.checkBoxTextHolder textarea {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*----------------------------------multi choice edit menu----------------------------*/
+
+.modalCoverCheckBox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+
+.CheckBoxEdit {
+    margin: 15% auto;
+    width: 70%;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding-bottom: 1em;
+}
+
+.CheckBoxEdit button {
+    cursor: pointer;
+    outline: none;
+    margin: .5em 2em;
+    width: 10em;
+    line-height: 1.5em;
+    background-color: rgb(245, 203, 92);
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+.CheckBoxEdit button:hover {
+    color: rgb(33, 34, 33);
+    background-color:  rgb(255, 193, 22);
+}
+
+.checkBoxChBtn {
+    display: inline-block;
+    border-bottom: 1px solid  rgb(236, 195, 13);
+    margin: 0 2em;
+    color: rgb(51, 53, 51);
+}
+
+.checkBoxChBtn label {
+    padding-left: 1em;
+    font-size: .8em;
+}
+
+/*------------------------------------value and name grid------------------------------*/
+
+.CheckBoxNoteWrapper textarea {
+    border-bottom: 2px solid rgb(116, 111, 114);
+    margin: .8em 2em;
+    width: 90%;
+    padding-bottom: 1em;
+    text-indent: 1em;
+}
+
+.multiGrid {
+    display: grid;
+    margin: 0 auto;
+    width: 90%;
+    grid-template-columns: 15% 15% 7% 7% 23% 13% 12% 8%;
+}
+
+.multiGrid input {
+    height: 2.5em;
+    text-indent: .7em;
+    background: transparent;
+    border: 1px solid rgb(51, 53, 51);
+}
+
+@media only screen and (max-width: 1200px) {
+    .CheckBoxEdit {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .multiGrid {
+        width: 100%;
+        grid-template-columns: repeat(4 , 1fr);
+        margin-bottom: .3em;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .multiGrid {
+        width: 100%;
+        grid-template-columns: repeat(2 , 1fr);
+        margin-bottom: .3em;
+    }
+    .checkwrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 95%;
+    }
+}

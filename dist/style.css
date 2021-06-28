@@ -1,0 +1,1404 @@
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)
+CG red rgb(219, 58, 52)*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+/*-------------------------------general styles---------------------------------------*/
+
+body {
+    background: linear-gradient(0deg, rgb(207, 219, 213) 0%, rgb(218, 218, 218) 35%, rgb(232, 237, 223) 100%);
+    min-height: 100%;
+}
+
+/*------------------------------------all modal title input---------------------------------*/
+
+.allEditTitles {
+    margin: .8em 2em;
+    padding-bottom: 1em;;
+    display: block;
+    width: 80%;
+    border-bottom: 2px solid rgb(116, 111, 114);
+    color: rgb(51, 53, 51);
+}
+
+.allEditTitles label {
+    font-weight: bold;
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 1em;
+    width: 25%;
+    color: rgb(51, 53, 51);
+}
+
+.allEditTitles input {
+    color: rgb(51, 53, 51);
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(245, 203, 92);
+    border-top: 2px solid rgb(245, 203, 92);
+    border-right: 2px solid rgb(245, 203, 92);
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 1em;
+    width: 60%;
+}
+
+/*-------------------------------edit modals table buttons---------------------------------------*/
+
+.removeOptBtn {
+    cursor: pointer;
+    background-color: rgb(219, 58, 52) !important;
+}
+
+.uploadFileTag {
+    display: none;
+}
+
+.uploadOptBtn {
+    cursor: pointer;
+    background-color: rgb(245, 203, 92) !important;
+}
+.uploadBrowseBtn {
+    cursor: pointer;
+    background-color: rgb(245, 203, 92) !important;
+}
+
+.editMenuBtn button {
+    cursor: pointer;
+    outline: none;
+    margin: .5em 2em;
+    width: 10em;
+    line-height: 1.5em;
+    background-color: rgb(245, 203, 92);
+    border: none;
+    transition: all .5s ease-in-out;
+}
+.editMenuBtn button:hover {
+    color: rgb(33, 34, 33);
+    background-color: rgb(255, 193, 22);
+}
+
+/*-------------------------------app title---------------------------------------*/
+
+#appTitle {
+    width: 100%;
+    line-height: 3.5em;
+    background-color: rgb(51, 53, 51);
+    color: rgb(245, 203, 92);
+    text-align: center;
+    border-bottom: .2em solid rgb(245, 203, 92);
+}
+
+#appTitle p {
+    font-family: cursive ,sans-serif;
+    font-size: 2em;
+
+}   
+
+/*-------------------------------form location---------------------------------------*/
+
+#page-wrap {
+    display: flex;
+}
+
+#formLocation {
+    margin: 1.5em 1em 2em 2.5em;
+    padding: 1em;
+    background-color: whitesmoke;
+    width:85%;
+    transition: all 1s ease-in-out;
+    min-height: 550px;
+    height: auto;
+    max-height: 500em;
+    border: 2px solid rgb(193, 178, 174);
+}
+
+#sectionCreatorButton {
+    width: 30%;
+    height: auto;
+    margin: 4em auto;
+    background-color: rgb(245, 203, 92);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+#sectionCreatorButton:hover {
+    background-color: rgb(236, 195, 13);
+    color: rgb(51, 53, 51);
+}
+
+#sectionCreatorButton p {
+    text-align: center;
+    line-height: 3em;
+}
+
+/*-------------------------------draggable buttons---------------------------------------*/
+
+.Btn {
+    display: block;
+    width: 10em;
+    height: 4em;
+    cursor: move;
+    background: rgb(245, 203, 92);
+    border: none;
+    color: rgb(51, 53, 51);
+    outline: none;
+    transition: .5s ease-in-out;
+    margin-top: 1.7em;
+    margin-bottom: 2em;
+    font-weight: bold;
+    font-size: normal;
+}
+.Btn span {
+    display: block;
+    width: 10em;
+    line-height: 4em;
+    text-align: center;
+}
+
+.Btn span:hover {
+    background-color: rgb(236, 195, 13);
+    color: rgb(51, 53, 51);
+}
+.Btn span:active {
+    color: rgb(236, 195, 13);
+    background-color: rgb(51, 53, 51);
+}
+
+/*-------------------------------------buttom app buttons---------------------------------*/
+
+#btns {
+    display: flex;
+    margin: 2em auto;
+    justify-content: center;
+}
+
+.Btn1 {
+    box-sizing: border-box;
+    padding: .7em;
+    width: 10em;
+    display: inline-block;
+    margin: 0 2em;
+    background-color: rgb(51, 53, 51);
+    color: rgb(245, 203, 92);
+    border: none;
+    font-size: 1em;
+    transition: all .5s ease-in-out;
+    border: 1px solid rgb(51, 53, 51);
+}
+
+.Btn1:hover {
+    color: rgb(51, 53, 51);
+    background-color: rgb(245, 203, 92);
+    border: 1px solid rgb(51, 53, 51);
+    cursor: pointer;
+}
+
+#buttons {
+    position: fixed;
+    right: 1%;
+}
+
+#toTop {
+    position: fixed;
+    left: -2.2em;
+    top: 50%;
+}
+
+#toTop a {
+    text-decoration: none;
+    transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    display: inline-block;
+    background-color: rgb(245, 203, 92);
+    color: rgb(51, 53, 51);
+    padding: .5em .5em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*------------------------------------save modal---------------------------------*/
+
+.modalForm {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+#modalFormContex {
+    margin: 15% auto;
+    width: 50%;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding: 1em;
+}
+
+.saveModalBtn {
+    cursor: pointer;
+    outline: none;
+    margin: .5em 2em;
+    width: 10em;
+    line-height: 1.5em;
+    background-color: rgb(245, 203, 92);
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+.saveModalBtn:hover {
+    color: rgb(33, 34, 33);
+    background-color: rgb(236, 195, 13);
+}
+
+/*------------------------------------loading modal---------------------------------*/
+
+#loadingModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+#loadingModalContex {
+    margin: 15% auto;
+    text-align: center;
+    background: transparent;
+    z-index: 200;
+}
+
+@media only screen and (max-width: 1366px) {
+    .Btn {
+        width: 8em;
+        height: 3em;
+        margin-top: 1.3em;
+        margin-bottom: 1.5em;
+    }
+    .Btn span {
+        width: 8em;
+        line-height: 3em;
+        text-align: center;
+    }
+    #formLocation {
+        margin: 1.1em 1em 2em 2.5em;
+        padding: 1em;
+        width:82%;
+    }
+    #toTop {
+        left: -1.8em;
+        top: 50%;
+    } 
+    #toTop a {
+        padding: .3em .3em;
+        font-size: .8em;
+    }
+    .allEditTitles {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #formLocation {
+        margin: 1.1em 1em 2em 2.5em;
+        padding: 1em;
+        width:75%;
+    }
+    #sectionCreatorButton {
+        margin: 2em auto 6em;
+    }
+    #modalFormContex {
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 450px) {
+    #buttons {
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr );
+        position: fixed;
+        bottom: 2em;
+        right: 0;
+        width: 100%;
+    }
+    .Btn {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: 2em;
+    }
+    .Btn span {
+        width: 100%;
+        border: 1px solid rgb(51, 53, 51);
+        display: inline-block;
+        text-align: center;
+        line-height: 2em;
+    }
+    #btns {
+        position: fixed;
+        bottom: 0;
+        margin: 0;
+        justify-content: center;
+        width: 100%;
+        height: 2em;
+    }
+    .Btn1 {
+        padding: 0;
+        width: 100%;
+        display: inline-block;
+        margin: 0;
+        font-size: 1em;
+    }
+    #formLocation {
+        margin: 0em 0em 0em 0em;
+        padding: 0;
+        width:100%;
+    }
+    #toTop a {
+        color: rgb(245, 203, 92);
+        background-color: rgb(51, 53, 51);
+    }
+}
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)*/
+
+
+
+/*----------------------------------text area----------------------------*/
+
+.titleArea {
+    background: whitesmoke;
+    color: rgb(48, 48, 48);
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-indent: 0;
+    line-height: 1em;
+    border-bottom: 3px solid rgb(245, 203, 92);
+}
+
+.titleArea p {
+    padding-left: 1.5em;
+    margin-top: .4em;
+    font-weight: bold;
+}
+
+.textBoxItem {
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+    min-height: 3cm;
+    height: auto;
+    margin: 0 auto;
+    outline: none;
+}
+
+.textBoxWrapper {
+    margin: 1em auto;
+    padding: 0;
+}
+
+.barIcons {
+    margin: .3em .2em .2em;
+    cursor: pointer;
+}
+
+/*----------------------------------text area edit menu----------------------------*/
+
+.modalCoverTextbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+.textBoxEdit {
+    margin: 15% auto;
+    width: 50%;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding-bottom: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+    .textBoxEdit {
+        width: 100%;
+    }
+}
+
+
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)*/
+
+
+/*----------------------------------single choice----------------------------*/
+
+.radioIcon {
+    margin: .3em .2em .2em;
+}
+
+.radioButtonWrapper {
+    margin: 1em auto;
+    padding: 0;
+    color: rgb(48, 48, 48);
+}
+
+/*----------------------------------single choice items----------------------------*/
+.radiowrap {
+    display: flex;
+    justify-content: start;
+    width: 95%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: .5em auto;
+}
+
+.radioItemWrap {
+    margin: 1em 6% 1em 0;
+    display: flex;
+    max-width: 20%;
+    align-items: center;
+    flex-direction: row;
+}
+
+.radioIt {
+    padding: 0 .5em;
+    font-size: medium;
+}
+
+.radioNoteHolder p {
+    margin: 1em auto;
+    width: 95%;
+}
+
+.radioTextHolder textarea {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+/*----------------------------------single choice edit menu----------------------------*/
+
+.modalCoverRadio {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+
+.radioEdit {
+    margin: 15% auto;
+    width: 70%;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding-bottom: 1em; 
+}
+
+.radioEdit button {
+    cursor: pointer;
+    outline: none;
+    margin: .5em 2em;
+    width: 10em;
+    line-height: 1.5em;
+    background-color: rgb(245, 203, 92);
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+.radioEdit button:hover {
+    color: rgb(33, 34, 33);
+    background-color:  rgb(255, 193, 22);
+}
+
+.radioChBtn {
+    display: inline-block;
+    border-bottom: 1px solid  rgb(236, 195, 13);
+    margin: 0 2em;
+    color: rgb(51, 53, 51);
+}
+
+.radioChBtn label {
+    padding-left: 1em;
+    font-size: .8em;
+}
+
+/*------------------------------------value and name grid------------------------------*/
+
+.radioNoteWrapper textarea {
+    border-bottom: 2px solid rgb(116, 111, 114);
+    margin: .8em 2em;
+    width: 90%;
+    padding-bottom: 1em;
+    text-indent: 1em;
+}
+
+.singleGrid {
+    display: grid;
+    margin: 0 auto;
+    width: 90%;
+    grid-template-columns: 15% 15% 7% 7% 23% 13% 12% 8%;
+}
+
+.singleGrid input {
+    height: 2.5em;
+    text-indent: .7em;
+    background: transparent;
+    border: 1px solid rgb(51, 53, 51);
+}
+
+@media only screen and (max-width: 1200px) {
+    .radioEdit {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .singleGrid {
+        width: 100%;
+        grid-template-columns: repeat(4 , 1fr);
+        margin-bottom: .3em;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .singleGrid {
+        width: 100%;
+        grid-template-columns: repeat(2 , 1fr);
+        margin-bottom: .3em;
+    }
+    .radiowrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 95%;
+    }
+}
+
+
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)*/
+
+
+/*----------------------------------multi choice----------------------------*/
+
+.checkBoxWrapper {
+    margin: 1em auto;
+    padding: 0;
+}
+
+/*----------------------------------multi choice items----------------------------*/
+.checkwrap {
+    display: flex;
+    justify-content: start;
+    width: 95%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: .5em auto;
+}
+
+.checkItemWrap {
+    margin: 1em 6% 1em 0;
+    display: flex;
+    max-width: 20%;
+    align-items: center;
+    flex-direction: row;
+}
+
+.checkItm {
+    padding: 0 .5em;
+    font-size: medium;
+}
+
+.checkBoxNoteHolder p {
+    margin: 1em auto;
+    width: 95%;
+}
+
+.checkBoxTextHolder textarea {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*----------------------------------multi choice edit menu----------------------------*/
+
+.modalCoverCheckBox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+
+.CheckBoxEdit {
+    margin: 15% auto;
+    width: 70%;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding-bottom: 1em;
+}
+
+.CheckBoxEdit button {
+    cursor: pointer;
+    outline: none;
+    margin: .5em 2em;
+    width: 10em;
+    line-height: 1.5em;
+    background-color: rgb(245, 203, 92);
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+.CheckBoxEdit button:hover {
+    color: rgb(33, 34, 33);
+    background-color:  rgb(255, 193, 22);
+}
+
+.checkBoxChBtn {
+    display: inline-block;
+    border-bottom: 1px solid  rgb(236, 195, 13);
+    margin: 0 2em;
+    color: rgb(51, 53, 51);
+}
+
+.checkBoxChBtn label {
+    padding-left: 1em;
+    font-size: .8em;
+}
+
+/*------------------------------------value and name grid------------------------------*/
+
+.CheckBoxNoteWrapper textarea {
+    border-bottom: 2px solid rgb(116, 111, 114);
+    margin: .8em 2em;
+    width: 90%;
+    padding-bottom: 1em;
+    text-indent: 1em;
+}
+
+.multiGrid {
+    display: grid;
+    margin: 0 auto;
+    width: 90%;
+    grid-template-columns: 15% 15% 7% 7% 23% 13% 12% 8%;
+}
+
+.multiGrid input {
+    height: 2.5em;
+    text-indent: .7em;
+    background: transparent;
+    border: 1px solid rgb(51, 53, 51);
+}
+
+@media only screen and (max-width: 1200px) {
+    .CheckBoxEdit {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .multiGrid {
+        width: 100%;
+        grid-template-columns: repeat(4 , 1fr);
+        margin-bottom: .3em;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .multiGrid {
+        width: 100%;
+        grid-template-columns: repeat(2 , 1fr);
+        margin-bottom: .3em;
+    }
+    .checkwrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 95%;
+    }
+}
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)*/
+
+
+
+
+/*----------------------------------label----------------------------*/
+
+.labelWrapper {
+    margin: 1em auto;
+    padding: 0;
+}
+
+/*----------------------------------label items----------------------------*/
+
+.labelwrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.labelItemWrap {
+    position: relative;
+    margin: 1em 1em 1em;
+    width: 45%;
+}
+
+.labelItemWrap input {
+    display: inline-block;
+    width: 60%;
+    padding: .5em;
+    font-size: 1em;
+    color: rgb(34, 34, 34);
+    border: none;
+    border-bottom: 1px dashed rgb(51, 53, 51);
+    border-top: 1px dashed rgb(51, 53, 51);
+    border-right: 1px dashed rgb(51, 53, 51);
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.labelItemWrap label {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: .5em;
+    background: rgb(245, 203, 92);
+    border-bottom: 1px solid rgb(245, 203, 92);
+    border-top: 1px solid rgb(245, 203, 92);
+    border-right: 1px solid rgb(245, 203, 92);
+    min-width: 40%;
+    font-size: 1em;
+    color: rgb(51, 53, 51);
+    pointer-events: none;
+    transition: .5s;
+    font-weight: bold;
+}
+
+/*----------------------------------label edit menu----------------------------*/
+
+.modalCoverLabel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+
+.labelEdit {
+    margin: 15% auto;
+    width: 50%;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding-bottom: 1em;
+}
+
+.labelEdit button {
+    cursor: pointer;
+    outline: none;
+    margin: .5em 2em;
+    width: 10em;
+    line-height: 1.5em;
+    background-color: rgb(245, 203, 92);
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+.labelEdit button:hover {
+    color: rgb(33, 34, 33);
+    background-color:  rgb(255, 193, 22);
+}
+
+.labelValues {
+    display: grid;
+    margin-bottom: 1em;
+    grid-template-columns: 20% 56% 20%;
+}
+
+.labelValues label {
+    width: 100% !important;
+    line-height: 1em;
+    text-align: center;
+
+}
+
+.labelValues input {
+    width: 100% !important;
+    height: 100%;
+    line-height: 1em;
+}
+
+.removeOptBtnLabel {
+    cursor: pointer;
+    background-color: rgb(245, 203, 92) !important;
+    font-size: .9em !important;
+}
+
+@media only screen and (max-width: 1200px) {
+    .labelEdit {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .labelItemWrap {
+        width: 90%;
+    }
+}
+
+
+/*----------------------------------image----------------------------*/
+
+.imageWrapper {
+    margin: 1em auto;
+    padding: 0;
+}
+
+
+/*----------------------------------image item----------------------------*/
+
+.imageHolder {
+    margin: 1em auto;
+    width: 95%;
+}
+.imageHolder img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/*----------------------------------image edit menu----------------------------*/
+
+
+
+
+
+.modalCoverImage {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+
+.imageEdit {
+    margin: 15% auto;
+    width: 50%;
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding-bottom: 1em;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+}
+
+.imgUploadwrap {
+    margin: 1em 2em;
+}
+
+.imgUploadwrap input {
+    border: none;
+    width: 10em;
+    line-height: 2em;
+    cursor: pointer;
+}
+.imgUploadwrap input:hover {
+    background-color: rgb(255, 193, 22) !important;
+    border: none;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .imageEdit {
+        width: 100%;
+    }
+}
+
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)*/
+
+/*----------------------------------note----------------------------*/
+
+.noteItem {
+    margin: 2em auto;
+    width: 95%;
+    border: 2px solid rgb(245, 203, 92);
+    display: block;
+    padding: 1em;
+}
+
+/*----------------------------------note edit menu----------------------------*/
+
+.modalCoverNote {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+.noteEdit {
+    margin: 15% auto;
+    width: 50%;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding-bottom: 1em;
+}
+.noteEdit textarea {
+    margin: 2em auto;
+    width: 100%;
+    min-height: 10em;
+    border: 2px solid rgb(245, 203, 92);
+    display: block;
+}
+@media only screen and (max-width: 1024px) {
+    .noteEdit {
+        width: 100%;
+    }
+    .noteEdit textarea {
+        width: 90%;
+    }
+}
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)*/
+
+
+/*----------------------------------section creator----------------------------*/
+
+.sectionWrapper {
+    width: 100%;
+    max-height: auto;
+    margin: 1em auto;
+}
+
+.sectionTitle {
+    width: 100%;
+    line-height: 1.3em;
+    background: rgb(245, 203, 92);
+    color: rgb(51, 53, 51);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionTitle p {
+    margin-left: 2em;
+    padding-top: .1em;
+    font-weight: bold;
+}
+
+.sectionButton {
+    margin: .1em .2em .1em;
+    cursor: pointer;
+}
+
+.formWrapper {
+    width: 100%;
+    height: auto; 
+}
+
+.panel {
+  max-height: 400em;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
+.collapseIcon {
+  transform: rotate(180deg);
+}
+
+.rotate {
+  transform: rotate(0deg);
+}
+
+.deactivePanel {
+  max-height: 0;
+  transition: all .5s ease-in-out;
+}
+
+/*----------------------------------drop zone--------------------------*/
+.dropWrap {
+    margin: 0 auto;
+}
+
+.drop-zone {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: rgb(58, 58, 58);
+    font-size: 16px;
+    width: 75%;
+    text-align: center;
+    line-height: 5em;
+    background-color: rgb(241, 227, 185);
+    overflow: hidden;
+    transition: .5s;
+    margin: 2em auto;
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
+  
+  
+  .drop-zone span {
+    position: absolute;
+    display: block;
+  }
+  
+  .drop-zone span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgb(231, 175, 20));
+    animation: btn-anim1 4s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .drop-zone span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgb(231, 175, 20));
+    animation: btn-anim2 4s linear infinite;
+    animation-delay: 1s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .drop-zone span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgb(231, 175, 20));
+    animation: btn-anim3 4s linear infinite;
+    animation-delay: 2s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .drop-zone span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgb(231, 175, 20));
+    animation: btn-anim4 4s linear infinite;
+    animation-delay: 3s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+/*----------------------------------section edit menu----------------------------*/
+
+.modalCoverSection {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(122, 122, 122, 0.616);
+  z-index: 100; 
+}
+
+.sectionEdit {
+  margin: 15% auto;
+  width: 50%;
+  background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+  line-height: 3em;
+  border: 2px solid rgb(116, 111, 114);
+  z-index: 200;
+  padding-bottom: 1em;
+}
+
+.sectionEditItems{
+  margin: .8em 2em;
+  padding-bottom: 1em;;
+  display: block;
+  width: 80%;
+  border-bottom: 2px solid rgb(68, 68, 68);
+}
+.sectionEditItems label {
+  border: 1px solid rgb(68, 68, 68);
+  font-weight: bold;
+  padding: .5em;
+  box-sizing: border-box;
+  font-size: 1em;
+  width: 25%;
+}
+
+.sectionEditItems input {
+  outline: none;
+  background: rgb(228, 224, 206);
+  border: none;
+  border-bottom: 1px solid rgb(68, 68, 68);
+  border-top: 1px solid rgb(68, 68, 68);
+  border-right: 1px solid rgb(68, 68, 68);
+  padding: .5em;
+  box-sizing: border-box;
+  font-size: 1em;
+  width: 40%;
+}
+
+@media only screen and (max-width: 768px) {
+  .sectionEdit {
+      width: 100%;
+  }
+}
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+CG red rgb(219, 58, 52)
+hover btn rgb(236, 195, 13)*/
+
+
+/*----------------------------------header----------------------------*/
+
+#headerBar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(245, 203, 92);
+    color: rgb(51, 53, 51);
+}
+
+#formTitle {
+    margin: .5em 1.5em;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.headerImgHolder {
+    margin: .1em auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#headerImages {
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerEditIcon {
+    margin: .3em;
+    cursor: pointer;
+}
+
+/*----------------------------------header edit menu----------------------------*/
+
+.modalCoverHeader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+
+.headerEdit {
+    margin: 15% auto;
+    width: 90%;
+    height: auto;
+    line-height: 2em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding-bottom: 1em;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+}
+
+/*------------------------image container------------------------*/
+.imgGridContainer {
+    display: grid;
+    margin: 0 auto;
+    width: 90%;
+}
+.imageOptItemWrap {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 10% 10% 44% 12% 12% 12%;
+}
+
+.imageOptItemWrap input {
+    line-height: 3em;
+    text-indent: .7em;
+    background: transparent;
+    border: 1px solid rgb(51, 53, 51);
+    font-size: .7em;
+}
+
+.imageOptItemWrap input:focus {
+    outline: none;
+}
+
+.imageOptItemWrap input:-webkit-autofill,
+.imageOptItemWrap input:-webkit-autofill:hover, 
+.imageOptItemWrap input:-webkit-autofill:focus, 
+.imageOptItemWrap input:-webkit-autofill:active  {
+    box-shadow: 0 0 0 30px rgb(232, 237, 223) inset !important;
+    -webkit-box-shadow: 0 0 0 30px rgb(232, 237, 223) inset !important;
+}
+.imageOptItemWrap input::-webkit-outer-spin-button,
+.imageOptItemWrap input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.imageOptItemWrap input[type=number] {
+    -moz-appearance: textfield;
+}
+/*----------------------------bottuns-----------------------------*/
+.headerBtn {
+    cursor: pointer;
+    outline: none;
+    margin: 1em 2em;
+    width: 10em;
+    line-height: 1.5em;
+    background-color: rgb(245, 203, 92);
+    border: none;
+    transition: all .5s ease-in-out;
+}
+.headerBtn:hover {
+    color: rgb(33, 34, 33);
+    background-color: rgb(236, 195, 13);
+}
+
+@media only screen and (max-width: 768px) {
+    .headerEdit {
+        width: 100%;
+    }
+    .imageOptItemWrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 95%;
+    }
+}
+

@@ -1,0 +1,393 @@
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)
+CG red rgb(219, 58, 52)*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+/*-------------------------------general styles---------------------------------------*/
+
+body {
+    background: linear-gradient(0deg, rgb(207, 219, 213) 0%, rgb(218, 218, 218) 35%, rgb(232, 237, 223) 100%);
+    min-height: 100%;
+}
+
+/*------------------------------------all modal title input---------------------------------*/
+
+.allEditTitles {
+    margin: .8em 2em;
+    padding-bottom: 1em;;
+    display: block;
+    width: 80%;
+    border-bottom: 2px solid rgb(116, 111, 114);
+    color: rgb(51, 53, 51);
+}
+
+.allEditTitles label {
+    font-weight: bold;
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 1em;
+    width: 25%;
+    color: rgb(51, 53, 51);
+}
+
+.allEditTitles input {
+    color: rgb(51, 53, 51);
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(245, 203, 92);
+    border-top: 2px solid rgb(245, 203, 92);
+    border-right: 2px solid rgb(245, 203, 92);
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 1em;
+    width: 60%;
+}
+
+/*-------------------------------edit modals table buttons---------------------------------------*/
+
+.removeOptBtn {
+    cursor: pointer;
+    background-color: rgb(219, 58, 52) !important;
+}
+
+.uploadFileTag {
+    display: none;
+}
+
+.uploadOptBtn {
+    cursor: pointer;
+    background-color: rgb(245, 203, 92) !important;
+}
+.uploadBrowseBtn {
+    cursor: pointer;
+    background-color: rgb(245, 203, 92) !important;
+}
+
+.editMenuBtn button {
+    cursor: pointer;
+    outline: none;
+    margin: .5em 2em;
+    width: 10em;
+    line-height: 1.5em;
+    background-color: rgb(245, 203, 92);
+    border: none;
+    transition: all .5s ease-in-out;
+}
+.editMenuBtn button:hover {
+    color: rgb(33, 34, 33);
+    background-color: rgb(255, 193, 22);
+}
+
+/*-------------------------------app title---------------------------------------*/
+
+#appTitle {
+    width: 100%;
+    line-height: 3.5em;
+    background-color: rgb(51, 53, 51);
+    color: rgb(245, 203, 92);
+    text-align: center;
+    border-bottom: .2em solid rgb(245, 203, 92);
+}
+
+#appTitle p {
+    font-family: cursive ,sans-serif;
+    font-size: 2em;
+
+}   
+
+/*-------------------------------form location---------------------------------------*/
+
+#page-wrap {
+    display: flex;
+}
+
+#formLocation {
+    margin: 1.5em 1em 2em 2.5em;
+    padding: 1em;
+    background-color: whitesmoke;
+    width:85%;
+    transition: all 1s ease-in-out;
+    min-height: 550px;
+    height: auto;
+    max-height: 500em;
+    border: 2px solid rgb(193, 178, 174);
+}
+
+#sectionCreatorButton {
+    width: 30%;
+    height: auto;
+    margin: 4em auto;
+    background-color: rgb(245, 203, 92);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+#sectionCreatorButton:hover {
+    background-color: rgb(236, 195, 13);
+    color: rgb(51, 53, 51);
+}
+
+#sectionCreatorButton p {
+    text-align: center;
+    line-height: 3em;
+}
+
+/*-------------------------------draggable buttons---------------------------------------*/
+
+.Btn {
+    display: block;
+    width: 10em;
+    height: 4em;
+    cursor: move;
+    background: rgb(245, 203, 92);
+    border: none;
+    color: rgb(51, 53, 51);
+    outline: none;
+    transition: .5s ease-in-out;
+    margin-top: 1.7em;
+    margin-bottom: 2em;
+    font-weight: bold;
+    font-size: normal;
+}
+.Btn span {
+    display: block;
+    width: 10em;
+    line-height: 4em;
+    text-align: center;
+}
+
+.Btn span:hover {
+    background-color: rgb(236, 195, 13);
+    color: rgb(51, 53, 51);
+}
+.Btn span:active {
+    color: rgb(236, 195, 13);
+    background-color: rgb(51, 53, 51);
+}
+
+/*-------------------------------------buttom app buttons---------------------------------*/
+
+#btns {
+    display: flex;
+    margin: 2em auto;
+    justify-content: center;
+}
+
+.Btn1 {
+    box-sizing: border-box;
+    padding: .7em;
+    width: 10em;
+    display: inline-block;
+    margin: 0 2em;
+    background-color: rgb(51, 53, 51);
+    color: rgb(245, 203, 92);
+    border: none;
+    font-size: 1em;
+    transition: all .5s ease-in-out;
+    border: 1px solid rgb(51, 53, 51);
+}
+
+.Btn1:hover {
+    color: rgb(51, 53, 51);
+    background-color: rgb(245, 203, 92);
+    border: 1px solid rgb(51, 53, 51);
+    cursor: pointer;
+}
+
+#buttons {
+    position: fixed;
+    right: 1%;
+}
+
+#toTop {
+    position: fixed;
+    left: -2.2em;
+    top: 50%;
+}
+
+#toTop a {
+    text-decoration: none;
+    transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    display: inline-block;
+    background-color: rgb(245, 203, 92);
+    color: rgb(51, 53, 51);
+    padding: .5em .5em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*------------------------------------save modal---------------------------------*/
+
+.modalForm {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+#modalFormContex {
+    margin: 15% auto;
+    width: 50%;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding: 1em;
+}
+
+.saveModalBtn {
+    cursor: pointer;
+    outline: none;
+    margin: .5em 2em;
+    width: 10em;
+    line-height: 1.5em;
+    background-color: rgb(245, 203, 92);
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+.saveModalBtn:hover {
+    color: rgb(33, 34, 33);
+    background-color: rgb(236, 195, 13);
+}
+
+/*------------------------------------loading modal---------------------------------*/
+
+#loadingModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+#loadingModalContex {
+    margin: 15% auto;
+    text-align: center;
+    background: transparent;
+    z-index: 200;
+}
+
+@media only screen and (max-width: 1366px) {
+    .Btn {
+        width: 8em;
+        height: 3em;
+        margin-top: 1.3em;
+        margin-bottom: 1.5em;
+    }
+    .Btn span {
+        width: 8em;
+        line-height: 3em;
+        text-align: center;
+    }
+    #formLocation {
+        margin: 1.1em 1em 2em 2.5em;
+        padding: 1em;
+        width:82%;
+    }
+    #toTop {
+        left: -1.8em;
+        top: 50%;
+    } 
+    #toTop a {
+        padding: .3em .3em;
+        font-size: .8em;
+    }
+    .allEditTitles {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #formLocation {
+        margin: 1.1em 1em 2em 2.5em;
+        padding: 1em;
+        width:75%;
+    }
+    #sectionCreatorButton {
+        margin: 2em auto 6em;
+    }
+    #modalFormContex {
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 450px) {
+    #buttons {
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr );
+        position: fixed;
+        bottom: 2em;
+        right: 0;
+        width: 100%;
+    }
+    .Btn {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: 2em;
+    }
+    .Btn span {
+        width: 100%;
+        border: 1px solid rgb(51, 53, 51);
+        display: inline-block;
+        text-align: center;
+        line-height: 2em;
+    }
+    #btns {
+        position: fixed;
+        bottom: 0;
+        margin: 0;
+        justify-content: center;
+        width: 100%;
+        height: 2em;
+    }
+    .Btn1 {
+        padding: 0;
+        width: 100%;
+        display: inline-block;
+        margin: 0;
+        font-size: 1em;
+    }
+    #formLocation {
+        margin: 0em 0em 0em 0em;
+        padding: 0;
+        width:100%;
+    }
+    #toTop a {
+        color: rgb(245, 203, 92);
+        background-color: rgb(51, 53, 51);
+    }
+}

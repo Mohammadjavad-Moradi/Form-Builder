@@ -1,0 +1,139 @@
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)*/
+
+
+
+
+/*----------------------------------label----------------------------*/
+
+.labelWrapper {
+    margin: 1em auto;
+    padding: 0;
+}
+
+/*----------------------------------label items----------------------------*/
+
+.labelwrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.labelItemWrap {
+    position: relative;
+    margin: 1em 1em 1em;
+    width: 45%;
+}
+
+.labelItemWrap input {
+    display: inline-block;
+    width: 60%;
+    padding: .5em;
+    font-size: 1em;
+    color: rgb(34, 34, 34);
+    border: none;
+    border-bottom: 1px dashed rgb(51, 53, 51);
+    border-top: 1px dashed rgb(51, 53, 51);
+    border-right: 1px dashed rgb(51, 53, 51);
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.labelItemWrap label {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: .5em;
+    background: rgb(245, 203, 92);
+    border-bottom: 1px solid rgb(245, 203, 92);
+    border-top: 1px solid rgb(245, 203, 92);
+    border-right: 1px solid rgb(245, 203, 92);
+    min-width: 40%;
+    font-size: 1em;
+    color: rgb(51, 53, 51);
+    pointer-events: none;
+    transition: .5s;
+    font-weight: bold;
+}
+
+/*----------------------------------label edit menu----------------------------*/
+
+.modalCoverLabel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(122, 122, 122, 0.616);
+    z-index: 100;
+}
+
+.labelEdit {
+    margin: 15% auto;
+    width: 50%;
+    background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+    line-height: 3em;
+    border: 2px solid rgb(116, 111, 114);
+    z-index: 200;
+    padding-bottom: 1em;
+}
+
+.labelEdit button {
+    cursor: pointer;
+    outline: none;
+    margin: .5em 2em;
+    width: 10em;
+    line-height: 1.5em;
+    background-color: rgb(245, 203, 92);
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+.labelEdit button:hover {
+    color: rgb(33, 34, 33);
+    background-color:  rgb(255, 193, 22);
+}
+
+.labelValues {
+    display: grid;
+    margin-bottom: 1em;
+    grid-template-columns: 20% 56% 20%;
+}
+
+.labelValues label {
+    width: 100% !important;
+    line-height: 1em;
+    text-align: center;
+
+}
+
+.labelValues input {
+    width: 100% !important;
+    height: 100%;
+    line-height: 1em;
+}
+
+.removeOptBtnLabel {
+    cursor: pointer;
+    background-color: rgb(245, 203, 92) !important;
+    font-size: .9em !important;
+}
+
+@media only screen and (max-width: 1200px) {
+    .labelEdit {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .labelItemWrap {
+        width: 90%;
+    }
+}
+

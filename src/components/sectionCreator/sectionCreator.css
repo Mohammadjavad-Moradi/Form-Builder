@@ -1,0 +1,223 @@
+/* timberwolf rgb(207, 219, 213)
+alabaster rgb(232, 237, 223)
+maize crayola rgb(245, 203, 92)
+eerie Black rgb(36, 36, 35)
+jet rgb(51, 53, 51) 
+silver sonic rgb(116, 111, 114)
+hover btn rgb(236, 195, 13)*/
+
+
+/*----------------------------------section creator----------------------------*/
+
+.sectionWrapper {
+    width: 100%;
+    max-height: auto;
+    margin: 1em auto;
+}
+
+.sectionTitle {
+    width: 100%;
+    line-height: 1.3em;
+    background: rgb(245, 203, 92);
+    color: rgb(51, 53, 51);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionTitle p {
+    margin-left: 2em;
+    padding-top: .1em;
+    font-weight: bold;
+}
+
+.sectionButton {
+    margin: .1em .2em .1em;
+    cursor: pointer;
+}
+
+.formWrapper {
+    width: 100%;
+    height: auto; 
+}
+
+.panel {
+  max-height: 400em;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
+.collapseIcon {
+  transform: rotate(180deg);
+}
+
+.rotate {
+  transform: rotate(0deg);
+}
+
+.deactivePanel {
+  max-height: 0;
+  transition: all .5s ease-in-out;
+}
+
+/*----------------------------------drop zone--------------------------*/
+.dropWrap {
+    margin: 0 auto;
+}
+
+.drop-zone {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: rgb(58, 58, 58);
+    font-size: 16px;
+    width: 75%;
+    text-align: center;
+    line-height: 5em;
+    background-color: rgb(241, 227, 185);
+    overflow: hidden;
+    transition: .5s;
+    margin: 2em auto;
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
+  
+  
+  .drop-zone span {
+    position: absolute;
+    display: block;
+  }
+  
+  .drop-zone span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgb(231, 175, 20));
+    animation: btn-anim1 4s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .drop-zone span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgb(231, 175, 20));
+    animation: btn-anim2 4s linear infinite;
+    animation-delay: 1s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .drop-zone span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgb(231, 175, 20));
+    animation: btn-anim3 4s linear infinite;
+    animation-delay: 2s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .drop-zone span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgb(231, 175, 20));
+    animation: btn-anim4 4s linear infinite;
+    animation-delay: 3s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+/*----------------------------------section edit menu----------------------------*/
+
+.modalCoverSection {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(122, 122, 122, 0.616);
+  z-index: 100; 
+}
+
+.sectionEdit {
+  margin: 15% auto;
+  width: 50%;
+  background: linear-gradient(0deg, rgb(232, 237, 223) 100%, rgb(207, 219, 213) 0%);
+  line-height: 3em;
+  border: 2px solid rgb(116, 111, 114);
+  z-index: 200;
+  padding-bottom: 1em;
+}
+
+.sectionEditItems{
+  margin: .8em 2em;
+  padding-bottom: 1em;;
+  display: block;
+  width: 80%;
+  border-bottom: 2px solid rgb(68, 68, 68);
+}
+.sectionEditItems label {
+  border: 1px solid rgb(68, 68, 68);
+  font-weight: bold;
+  padding: .5em;
+  box-sizing: border-box;
+  font-size: 1em;
+  width: 25%;
+}
+
+.sectionEditItems input {
+  outline: none;
+  background: rgb(228, 224, 206);
+  border: none;
+  border-bottom: 1px solid rgb(68, 68, 68);
+  border-top: 1px solid rgb(68, 68, 68);
+  border-right: 1px solid rgb(68, 68, 68);
+  padding: .5em;
+  box-sizing: border-box;
+  font-size: 1em;
+  width: 40%;
+}
+
+@media only screen and (max-width: 768px) {
+  .sectionEdit {
+      width: 100%;
+  }
+}
